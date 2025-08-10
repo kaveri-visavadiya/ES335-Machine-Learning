@@ -14,17 +14,24 @@ For 4. and 5. I have utilised VGG16 instead of 19. A handmade 2-class dataset ha
 
 VGG-16 consists of 16 layers (13 convolutional and 3 fully connected), whereas VGG-19 consists of 19 layers (16 convolutional and 3 fully connected). Each layer consists of a convolutional layer followed by a max-pooling layer. The convolutional layers use 3x3 filters with a stride of 1 and padding of 1. The max-pooling layers use 2x2 filters with a stride of 2. VGG-16 has two convolutional layers in each block, while VGG-19 has three convolutional layers in each block.
 
+VGG1 has a single convolutional layer with 32 filters (size = 3x3) followed by max pooling layer (size = 2x2) followed by a dense layer of 128 neurons (activation = relu) followed by a final dense layer of one output neuron (activation = signmoid).
+
+VGG3 has 3 convolutional layers, first with 32 filters, second with 64 filters and third with 128 filters, followed by the same dense layers as above.
+
+Loss used = binary cross entropy.
+
 ## Result
 
 The following is the result of the analysis:
+
 ![image](https://github.com/KaveriVisavadiya/projects/assets/145709121/12f2b2ab-c977-48c4-acb7-3f134bcd0f41)
 
 Expected and observed result of testing accuracy for models: 
 
 ### VGG16_MLP_layers > VGG16_all_layers > VGG3_data_augmentation > VGG3 > VGG1.
 
-* VGG16 gives higher testing accuracy than VGG3 or VGG1 because the former has a 
-* Training only fully-connected layers of VGG16 gives higher testing accuracy than fine-tuning all layers (fully-connected + convolutional) because the convolutional network is already trained on the ImageNet dataset and changing these weights is expensive and loses information
+* VGG16 gives higher testing accuracy than VGG3 or VGG1 because the former has higher depth of convolutional layers (13 conv layes vs. 3 or 1 respectively), so it can learn higher representations of images.
+* Training only fully-connected layers of VGG16 gives higher testing accuracy than fine-tuning all layers of VGG16 (fully-connected + convolutional) because the convolutional network is already trained on the ImageNet dataset and our binary dataset is not large enough or informative enough to add any significant addition to the already learnt/pre-trained representations, moreover doing so is expensive in time and compute.
 
 ## References
 
