@@ -12,7 +12,7 @@ For 4. and 5. I have utilised VGG16 instead of 19. A handmade 2-class dataset ha
 
 ## Architecture of VGG16 and VGG19:
 
-* VGG-16 consists of 16 layers (13 convolutional and 3 fully connected), whereas VGG-19 consists of 19 layers (16 convolutional and 3 fully connected). The convolutional layers are the "feature-extractor" part and the fully connected layers are the "classifier" part. Each layer consists of a convolutional layer followed by a max-pooling layer. The convolutional layers use 3x3 filters with a stride of 1 and padding of 1. The max-pooling layers use 2x2 filters with a stride of 2. VGG-16 has two convolutional layers in each block, while VGG-19 has three convolutional layers in each block.
+* VGG16 is already pre-trained on ImageNet dataset. VGG16 consists of 16 layers (13 convolutional and 3 fully connected), whereas VGG-19 consists of 19 layers (16 convolutional and 3 fully connected). The convolutional layers are the "feature-extractor" part and the fully connected layers are the "classifier" part. Each layer consists of a convolutional layer followed by a max-pooling layer. The convolutional layers use 3x3 filters with a stride of 1 and padding of 1. The max-pooling layers use 2x2 filters with a stride of 2. VGG-16 has two convolutional layers in each block, while VGG-19 has three convolutional layers in each block.
 
 * VGG1 has a single convolutional layer with 32 filters (size = 3x3) followed by max pooling layer (size = 2x2) followed by a dense layer of 128 neurons (activation = relu) followed by a final dense layer of one output neuron (activation = signmoid).
 
