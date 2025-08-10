@@ -1,3 +1,7 @@
+Some info:
+
+VGG stands for Visual Geometry Group. VGG-16 and VGG-19 have 16 and 19 convolutional layers respectively.
+
 This folder contains Python files that compare the following CNN models on a binary image classification task: 
 
 1. VGG (1 block) 
