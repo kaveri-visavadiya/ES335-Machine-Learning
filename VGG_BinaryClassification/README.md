@@ -8,7 +8,7 @@ This folder contains Python files that compare the following CNN models on a bin
 4. Transfer learning using VGG16 or VGG19 with tuning all layers (including tuning convolution layers) 
 5. Transfer learning using VGG16 or VGG19 with tuning only final MLP layers (excluding convolution layers)
 
-For 4. and 5. I have utilised VGG16 instead of 19. A handmade 2-class dataset has been created for the purpose and can be referred in this folder. 80% of the dataset has been reserved for training purposes. Code has been run and tested on Google Colab using CPU runtime type.
+For 4. and 5. I have utilised VGG16 instead of 19. A handmade 2-class dataset of 100 images (consisting of koala and macaw) has been created for the purpose and can be referred in this folder. 80% of the dataset has been reserved for training purposes. Code has been run and tested on Google Colab using CPU runtime type.
 
 ## Architecture of VGG16 and VGG19:
 
